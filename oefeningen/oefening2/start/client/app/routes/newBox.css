@@ -1,0 +1,120 @@
+.new-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.new-box__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.new-box__header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.new-box__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.new-box__form-container {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.new-box__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-control {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group--dimension::after {
+  content: "Tip: Use Shift+↑↓ to change by 10";
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-group--dimension:hover::after {
+  opacity: 1;
+}
+
+.form-group--checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox-control {
+  margin-right: 0.5rem;
+}
+
+.checkbox-label--disabled {
+  color: var(--text-muted);
+}
+
+.checkbox-hint {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-left: 1.75rem;
+  font-size: 0.75rem;
+  color: var(--text-warning);
+}
+
+.form-actions {
+  margin-top: 1rem;
+}
+
+.new-box__preview {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.new-box__visualizer {
+  margin-bottom: 1.5rem;
+}
+
+.dimensions-display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.dimensions-display p {
+  margin: 0;
+  padding: 0.5rem;
+  background-color: var(--bg-lighter);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .new-box__content {
+    grid-template-columns: 1fr;
+  }
+}

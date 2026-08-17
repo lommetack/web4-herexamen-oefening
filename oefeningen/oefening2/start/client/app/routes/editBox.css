@@ -1,0 +1,63 @@
+.edit-box-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.edit-box-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.edit-box-page__header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.edit-box-page__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.edit-box-page__form-container {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Styles for .form-actions--edit can be kept here if specific to edit page button layout,
+   or moved to BoxForm.css if generic enough. For now, assuming BoxForm.css handles .form-actions */
+
+.edit-box-page__preview {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.edit-box-page__visualizer {
+  margin-bottom: 1.5rem;
+}
+
+.dimensions-display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.dimensions-display p {
+  margin: 0;
+  padding: 0.5rem;
+  background-color: var(--bg-lighter);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .edit-box-page__content {
+    grid-template-columns: 1fr;
+  }
+  /* .form-actions--edit might need specific responsive handling here if not in BoxForm.css */
+}

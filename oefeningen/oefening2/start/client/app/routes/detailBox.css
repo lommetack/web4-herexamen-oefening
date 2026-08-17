@@ -1,0 +1,89 @@
+.box-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.box-detail__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.box-detail__header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.box-detail__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.box-detail__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.box-detail__visualization {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.box-detail__info {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.box-detail__specs {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.box-detail__specs div {
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.box-detail__specs dt {
+  width: 40%; /* Same as th width */
+  color: var(--text-muted);
+  font-weight: bold;
+  padding-right: 1rem; /* Add some spacing */
+  flex-shrink: 0;
+}
+
+.box-detail__specs dd {
+  margin-left: 0; /* Reset browser default */
+  flex-grow: 1;
+}
+
+.box-detail__specs div:last-child {
+  border-bottom: none;
+}
+
+
+.box-detail__calculations h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.button-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.button-danger:hover {
+  background-color: var(--danger-color-dark);
+}
+
+@media (max-width: 768px) {
+  .box-detail__content {
+    grid-template-columns: 1fr;
+  }
+}

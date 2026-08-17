@@ -114,12 +114,18 @@
     {
       "userId": "1",
       "categoryId": "2",
-      "date": "2026-08-17",
-      "duration": 23,
-      "notes": "ezaeazeaz",
+      "date": "2026-08-20",
+      "duration": 28,
+      "notes": "updated",
       "id": "rKFcr0mmLcM"
     }
   ],
-  "follows": [],
+  "follows": [
+    {
+      "followerId": "1",
+      "followingId": "2",
+      "id": "p-2eKGOp9go"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

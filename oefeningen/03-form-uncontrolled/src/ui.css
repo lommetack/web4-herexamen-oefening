@@ -1,0 +1,48 @@
+label {
+  color: var(--text-2);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-6);
+}
+
+input {
+  padding: var(--size-2);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-2);
+  transition: border-color 0.3s ease;
+  background-color: var(--surface-1);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--blue-5);
+}
+
+button[type="submit"] {
+  margin-top: var(--size-3);
+  background-color: var(--blue-6);
+  color: var(--gray-0);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-6);
+  padding: var(--size-3) var(--size-5);
+  border: none;
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--blue-7);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-3);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+}

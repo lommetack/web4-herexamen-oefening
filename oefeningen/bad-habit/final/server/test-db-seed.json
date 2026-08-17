@@ -1,0 +1,75 @@
+{
+  "habits": [
+    {
+      "id": 1,
+      "name": "Skip workouts"
+    },
+    {
+      "id": 2,
+      "name": "Junk food"
+    },
+    {
+      "id": 3,
+      "name": "Procrastinate"
+    },
+    {
+      "id": 4,
+      "name": "Doomscrolling"
+    },
+    {
+      "id": 5,
+      "name": "Late night snacking"
+    }
+  ],
+  "logs": [
+    {
+      "id": 1,
+      "habits": [
+        1,
+        2,
+        4
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "id": 2,
+      "habits": [
+        3,
+        4
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "id": 3,
+      "habits": [
+        1,
+        5
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "habits": [
+        1,
+        4,
+        5
+      ],
+      "date": "2026-04-19",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "habits": [
+        2,
+        3
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "id": 6,
+      "habits": [
+        2
+      ],
+      "date": "2026-04-21"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+
+
+.error-container {
+  color: var(--red-6);
+}
+
+.breed-info {
+  margin-bottom: var(--size-5);
+}
+
+.breed-info h1 {
+  font-size: var(--font-size-5);
+  margin-bottom: var(--size-3);
+  color: var(--text-1);
+}
+
+.breed-description {
+  font-size: var(--font-size-2);
+  line-height: 1.6;
+  margin-bottom: var(--size-4);
+  color: var(--text-2);
+}
+
+.breed-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--size-3);
+  margin-bottom: var(--size-4);
+  background-color: var(--surface-2);
+  padding: var(--size-3);
+  border-radius: var(--radius-2);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-1);
+  color: var(--text-2);
+  margin-bottom: var(--size-1);
+}
+
+.stat-value {
+  font-size: var(--font-size-2);
+  color: var(--text-1);
+}
+
+.wiki-link {
+  display: inline-block;
+  margin-top: var(--size-3);
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: var(--font-weight-5);
+}
+
+.wiki-link:hover {
+  text-decoration: underline;
+}
+
+.breed-images h2 {
+  font-size: var(--font-size-3);
+  margin-bottom: var(--size-3);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--size-3);
+}
+

@@ -1,0 +1,81 @@
+@import "open-props/style";
+
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --brand: var(--indigo-6);
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+html,
+body {
+  font-family: var(--font-sans);
+  background-color: var(--surface-1);
+  color: var(--text-1);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Global Container & Card Styles --- */
+.container {
+  padding: var(--size-3);
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--surface-1);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+}
+
+/* --- Global Button Styles --- */
+.btn {
+  padding: var(--size-1) var(--size-2);
+  border: none;
+  border-radius: var(--radius-1);
+  cursor: pointer;
+  background-color: var(--surface-2);
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--surface-3);
+}
+
+/* --- Common Loader & Error Styles --- */
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  font-size: var(--font-size-2);
+  color: var(--text-2);
+}
+
+.app-layout {
+  display: flex;
+}
+
+.app-main {
+  flex: 1;
+  min-height: 100vh;
+}
+
+.cat-container {
+  padding: var(--size-3);
+  max-width: 60rem;
+  margin: 0 auto;
+}

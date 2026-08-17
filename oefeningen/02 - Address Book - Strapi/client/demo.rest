@@ -1,0 +1,16 @@
+# To use with the extension: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+DELETE http://localhost:1337/api/contacts/neq31rzb0hui0am70v9rgv1q
+
+###
+
+POST http://localhost:1337/api/contacts/
+content-type: application/json
+{"data": {}}
+
+###
+
+PUT http://localhost:1337/api/contacts/v2id3kbrayqnrwmrfypzhdaf
+content-type: application/json
+
+{"data": {"first": "ererer"}}

@@ -1,0 +1,9 @@
+# DELETE http://localhost:3000/contacts/glenn-reyes
+
+POST http://localhost:3000/contacts/
+content-type: application/json
+
+{
+    "id": "test",
+    "created": "Wed, 21 Oct 2015 18:27:50 GMT"
+}

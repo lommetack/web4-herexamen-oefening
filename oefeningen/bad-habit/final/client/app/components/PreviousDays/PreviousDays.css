@@ -1,0 +1,76 @@
+.previous-days {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.previous-days__item {
+  border-left: 3px solid var(--color-primary-light);
+  padding-left: var(--spacing-md);
+}
+
+.previous-days__date {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.previous-days__habits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.previous-days__habit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.dark .previous-days__habit {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.previous-days__habit--checked {
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+.dark .previous-days__habit--checked {
+  background-color: rgba(159, 103, 255, 0.2);
+}
+
+.previous-days__habit-name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.dark .previous-days__habit-name {
+  color: var(--color-text-dark);
+}
+
+.previous-days__habit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+.dark .previous-days__habit-icon {
+  background-color: #2d3748;
+  color: var(--color-text-dark);
+}
+
+.previous-days__habit--checked .previous-days__habit-icon {
+  background-color: var(--color-primary);
+  color: white;
+}

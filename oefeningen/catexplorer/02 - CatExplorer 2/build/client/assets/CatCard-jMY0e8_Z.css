@@ -1,0 +1,1 @@
+.cat-card{overflow:hidden;transition:transform .2s ease}.cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}.cat-card img{width:100%;height:var(--size-12);object-fit:cover}.cat-card-actions{display:flex;justify-content:space-between;padding:var(--size-2)}

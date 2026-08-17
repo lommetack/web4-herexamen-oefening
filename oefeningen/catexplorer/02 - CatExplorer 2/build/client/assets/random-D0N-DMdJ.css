@@ -1,0 +1,1 @@
+.random-cats-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--size-4)}.random-cats-header h1{font-size:var(--font-size-4);font-weight:var(--font-weight-6)}.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:var(--size-3)}

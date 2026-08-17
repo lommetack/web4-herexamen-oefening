@@ -1,0 +1,49 @@
+@import url('habit-form.css');
+
+.edit-habit {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-4);
+  background-color: var(--color-background-light);
+}
+
+.edit-habit__container {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding-top: var(--space-8);
+}
+
+.edit-habit__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.edit-habit__title {
+  font-size: var(--font-size-2xl);
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.edit-habit__link {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.edit-habit__link:hover {
+  text-decoration: underline;
+}
+
+.edit-habit__content {
+  background-color: var(--color-background);
+  border-radius: 8px;
+  padding: var(--space-6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

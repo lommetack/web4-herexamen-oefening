@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "first": {
+      "type": "string"
+    },
+    "last": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "uid"
+    },
+    "favorite": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import { User } from "lucide-react";
 import { Link } from "react-router";
+import { User } from "lucide-react";
 
 export function AppHeader({ currentUser }) {
   return (

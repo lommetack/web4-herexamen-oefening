@@ -1,10 +1,14 @@
+import { useLoaderData } from "react-router";
+import { Rss } from "lucide-react";
 import { FeedItem } from "../components/FeedItem.jsx";
 import { EmptyState } from "../components/EmptyState.jsx";
-import { Rss } from "lucide-react";
-import { getFeedSessions } from "../services/sessions.js";
-import { getFollows } from "../services/follows.js";
 import { getCurrentUserId } from "../services/auth.js";
+import { getFollows } from "../services/follows.js";
+import { getFeedSessions } from "../services/sessions.js";
 
+/**
+ * Feed = mijn eigen sessies + de sessies van iedereen die ik volg.
+ */
 export async function clientLoader() {
   const currentUserId = await getCurrentUserId();
   const follows = await getFollows(currentUserId);
@@ -12,11 +16,12 @@ export async function clientLoader() {
     currentUserId,
     ...follows.map((f) => f.followingId),
   ]);
-  return { feedSessions, currentUserId };
+
+  return { feedSessions };
 }
 
-export default function Feed({ loaderData }) {
-  const { feedSessions }  = loaderData;
+export default function Feed() {
+  const { feedSessions } = useLoaderData();
 
   if (feedSessions.length === 0) {
     return (

@@ -1,18 +1,17 @@
-import { Form, useNavigate, redirect } from "react-router";
+import { Form, redirect, useLoaderData, useNavigate } from "react-router";
 import { getCategories } from "../services/categories.js";
 import { getCurrentUserId } from "../services/auth.js";
 import { createSession } from "../services/sessions.js";
 
+/** Categorieën ophalen om de dropdown te vullen. */
 export async function clientLoader() {
   const categories = await getCategories();
+
   return { categories };
 }
 
+/** Draait bij het versturen van het formulier (method="post"). */
 export async function clientAction({ request }) {
-  if (request.method !== "POST") {
-    return null;
-  }
-
   const formData = await request.formData();
   const currentUserId = await getCurrentUserId();
 
@@ -20,15 +19,15 @@ export async function clientAction({ request }) {
     userId: currentUserId,
     categoryId: formData.get("categoryId"),
     date: formData.get("date"),
-    duration: parseInt(formData.get("duration"), 10),
+    duration: Number(formData.get("duration")),
     notes: formData.get("notes"),
   });
 
   return redirect("/");
 }
 
-export default function Track({ loaderData }) {
-  const { categories } = loaderData;
+export default function Track() {
+  const { categories } = useLoaderData();
   const navigate = useNavigate();
 
   // default date = today

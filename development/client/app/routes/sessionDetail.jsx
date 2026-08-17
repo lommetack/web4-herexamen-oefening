@@ -1,20 +1,26 @@
-import { Link, useNavigate } from "react-router";
+import { Link, useLoaderData, useNavigate } from "react-router";
 import { CalendarDays, Clock, FileText } from "lucide-react";
 import { formatDuration, formatDate } from "../utils/index.js";
 import { getSessionWithRelations } from "../services/sessions.js";
 import { getCurrentUserId } from "../services/auth.js";
 
+/**
+ * params bevat de dynamische stukken uit de URL.
+ * De route is "sessions/:sessionId", dus params.sessionId is het id.
+ */
 export async function clientLoader({ params }) {
   const session = await getSessionWithRelations(params.sessionId);
   const currentUserId = await getCurrentUserId();
+
   return { session, currentUserId };
 }
 
-export default function SessionDetail({ loaderData }) {
-  const { session, currentUserId } = loaderData;
+export default function SessionDetail() {
+  const { session, currentUserId } = useLoaderData();
+  const navigate = useNavigate();
+
   const { user, category } = session;
   const isOwn = session.userId === currentUserId;
-  const navigate = useNavigate();
 
   return (
     <div className="form-page">

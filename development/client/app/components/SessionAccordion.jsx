@@ -63,7 +63,7 @@ export function SessionAccordion({ sessions, currentUserId }) {
                 {session.userId === currentUserId && (
                   <div className="session-detail__actions">
                     <Link
-                      href={`/sessions/${session.id}/edit`}
+                      to={`/sessions/${session.id}/edit`}
                       className="btn btn--ghost"
                     >
                       Edit

@@ -1,5 +1,4 @@
-import { useFetcher } from "react-router";
-import { Link } from "react-router";
+import { Link, useFetcher } from "react-router";
 
 export function UserCard({ user, subText, isFollowing, followId }) {
   const fetcher = useFetcher();

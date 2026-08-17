@@ -1,11 +1,11 @@
-import { useFetcher } from "react-router";
+import { useFetcher, useLoaderData } from "react-router";
+import { Sofa } from "lucide-react";
 import { SessionAccordion } from "../components/SessionAccordion.jsx";
 import { EmptyState } from "../components/EmptyState.jsx";
-import { Sofa } from "lucide-react";
-import { getUser } from "../services/users.js";
-import { getFollow, getFollows } from "../services/follows.js";
-import { getSessionsByUser } from "../services/sessions.js";
 import { getCurrentUserId } from "../services/auth.js";
+import { getUser } from "../services/users.js";
+import { getFollow } from "../services/follows.js";
+import { getSessionsByUser } from "../services/sessions.js";
 
 export async function clientLoader({ params }) {
   const currentUserId = await getCurrentUserId();
@@ -28,9 +28,9 @@ export async function clientLoader({ params }) {
   };
 }
 
-export default function UserProfile({ loaderData }) {
+export default function UserProfile() {
   const { user, currentUserId, isOwnProfile, isFollowing, followId, sessions } =
-    loaderData;
+    useLoaderData();
 
   const fetcher = useFetcher();
 

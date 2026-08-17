@@ -1,6 +1,8 @@
-import { Form } from "react-router";
+import { Form, useNavigate } from "react-router";
 
 export function SessionForm({ session, submitLabel = "Save" }) {
+  const navigate = useNavigate();
+
   return (
     <Form method="post" className="session-form">
       <div className="form-group">
@@ -40,7 +42,7 @@ export function SessionForm({ session, submitLabel = "Save" }) {
         <button
           type="button"
           className="btn btn--ghost"
-          /* onClick={() => navigate to previous route} */
+          onClick={() => navigate(-1)}
         >
           Cancel
         </button>

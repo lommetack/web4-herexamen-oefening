@@ -1,10 +1,9 @@
 import { useState } from "react";
+import { useLoaderData } from "react-router";
 import { UserCard } from "../components/UserCard.jsx";
-import { getFollows } from "../services/follows.js";
-import { getUsers } from "../services/users.js";
 import { getCurrentUserId } from "../services/auth.js";
-import { createFollow, deleteFollow } from "../services/follows.js";
-import { redirect } from "react-router";
+import { getUsers } from "../services/users.js";
+import { createFollow, deleteFollow, getFollows } from "../services/follows.js";
 
 export async function clientLoader() {
   const currentUserId = await getCurrentUserId();
@@ -12,9 +11,14 @@ export async function clientLoader() {
     getUsers(),
     getFollows(currentUserId),
   ]);
+
   return { users, follows, currentUserId };
 }
 
+/**
+ * Deze action verwerkt zowel follow als unfollow.
+ * Het verborgen veld "intent" vertelt welke van de twee het is.
+ */
 export async function clientAction({ request }) {
   const formData = await request.formData();
   const intent = formData.get("intent");
@@ -31,8 +35,10 @@ export async function clientAction({ request }) {
   return null;
 }
 
-export default function Friends({ loaderData }) {
-  const { users, follows, currentUserId } = loaderData;
+export default function Friends() {
+  const { users, follows, currentUserId } = useLoaderData();
+
+  // Zoekterm is UI-state: hij hoort in React state, niet in de loader.
   const [query, setQuery] = useState("");
 
   const otherUsers = users.filter((u) => u.id !== currentUserId);

@@ -1,5 +1,5 @@
-import { formatDuration, formatDate } from "../utils/index.js";
 import { Link } from "react-router";
+import { formatDuration, formatDate } from "../utils/index.js";
 
 export function FeedItem({ session }) {
   const { user, category } = session;

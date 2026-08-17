@@ -1,0 +1,40 @@
+{
+  "boxes": [
+    {
+      "id": 1,
+      "width": 200,
+      "height": 150,
+      "depth": 180,
+      "thickness": 3,
+      "includeDragHandles": true,
+      "createdAt": "2023-12-15T00:00:00.000Z"
+    },
+    {
+      "width": 500,
+      "height": 80,
+      "depth": 300,
+      "thickness": 8,
+      "includeDragHandles": true,
+      "createdAt": "2025-05-22T08:01:32.330Z",
+      "id": 2
+    },
+    {
+      "width": 250,
+      "height": 150,
+      "depth": 180,
+      "thickness": 4,
+      "includeDragHandles": false,
+      "createdAt": "2025-05-22T09:41:45.565Z",
+      "id": 3
+    },
+    {
+      "width": 50,
+      "height": 50,
+      "depth": 150,
+      "thickness": 8,
+      "includeDragHandles": false,
+      "createdAt": "2026-08-17T13:08:11.547Z",
+      "id": 4
+    }
+  ]
+}

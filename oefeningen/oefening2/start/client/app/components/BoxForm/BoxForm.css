@@ -1,0 +1,79 @@
+.box-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-control {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group--dimension::after {
+  content: "Tip: Use Shift+↑↓ to change by 10";
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-group--dimension:hover::after {
+  opacity: 1;
+}
+
+.form-group--checkbox {
+  flex-direction: row; /* Keep label and checkbox on the same line */
+  flex-wrap: wrap; /* Allow hint to wrap */
+  align-items: center;
+}
+
+.checkbox-control {
+  margin-right: 0.5rem;
+}
+
+.checkbox-label--disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.checkbox-hint {
+  display: block;
+  width: 100%; /* Make hint take full width to appear below */
+  margin-top: 0.25rem;
+  margin-left: 1.75rem; /* Align with checkbox label roughly */
+  font-size: 0.75rem;
+  color: var(--text-warning);
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Ensure buttons in form-actions take appropriate width if needed */
+.form-actions button {
+  flex-grow: 1; /* Example: make buttons share space */
+}
+
+@media (max-width: 480px) { /* Adjust breakpoint as needed */
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions button {
+    width: 100%;
+  }
+}
